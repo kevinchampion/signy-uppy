@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  reserved_by: MyString
+  reserved_at: 2012-04-18 16:46:03
+  type: 
+
+two:
+  name: MyString
+  reserved_by: MyString
+  reserved_at: 2012-04-18 16:46:03
+  type: 

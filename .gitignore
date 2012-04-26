@@ -3,3 +3,5 @@ db/*.sqlite3
 log/*.log
 tmp/
 .sass-cache/
+signy-uppy.sublime-project
+signy-uppy.sublime-workspace

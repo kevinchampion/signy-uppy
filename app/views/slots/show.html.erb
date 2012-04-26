@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @slot.name %>
+</p>
+
+<p>
+  <b>Reserved by:</b>
+  <%= @slot.user.try(:email) %>
+</p>
+
+<p>
+  <b>Reserved at:</b>
+  <%= @slot.reserved_at %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @slot.slot_type %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_slot_path(@slot) %> |
+<%= link_to 'Back', slots_path %>

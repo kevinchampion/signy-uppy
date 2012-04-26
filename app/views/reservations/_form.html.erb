@@ -1,0 +1,12 @@
+<%= form_for(User.new(:email => @slot.user.try(:email)), :url => reservations_path) do |f| %>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <%= hidden_field_tag :slot_id, @slot.id %>
+  <div class="actions">
+    <%= f.submit "Reserve" %>
+  </div>
+<% end %>

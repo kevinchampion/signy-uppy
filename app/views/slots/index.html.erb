@@ -1,0 +1,31 @@
+<h1>Listing slots</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Reserved by</th>
+    <th>Reserved at</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @slots.each do |slot| %>
+  <tr>
+    <td><%= slot.name %></td>
+    <td><%= slot.user.try(:email) %></td>
+    <td><%= slot.reserved_at %></td>
+    <td><%= slot.slot_type %></td>
+    <td><%= link_to 'Show', slot %></td>
+    <td><%= link_to 'Reserve', new_reservation_path(:slot_id => slot.id) %></td>
+    <td><%= link_to 'Edit', edit_slot_path(slot) %></td>
+    <td><%= link_to 'Destroy', slot, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Slot', new_slot_path %>

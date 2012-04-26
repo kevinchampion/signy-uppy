@@ -1,4 +1,15 @@
 SignyUppy::Application.routes.draw do
+  root :to => "home#index"
+  get "home/index"
+
+  resources :slots
+
+  #get '/reservations/new' => 'reservations#new', :as => :new_reservation
+
+  resources :reservations, :only => [ :index, :new, :create ]
+
+  # get '/slots/:slot_id/reservations/new' => 'reservations#new', :as => :new_reservation
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
